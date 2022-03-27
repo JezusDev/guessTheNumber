@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 10px;
+  font-family: monospace;
+  color: #fff;
+}
+
+button {
+  font-size: inherit;
+  font-family: inherit;
+  border: none;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100%;
+  background: #133135;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game {
+  background: #52a160;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  padding: 2rem;
+}
+
+.game__title {
+  font-size: 2.4em;
+  text-align: center;
+  /* padding: 1em; */
+  margin-bottom: 10px;
+}
+
+#random-number {
+  width: 15rem;
+  background: none;
+  border: none;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+#random-number::-webkit-input-placeholder {
+  color: rgba(189, 189, 189, 0.644);
+}
+
+#random-number:focus {
+  outline: none;
+}
+
+.game__start {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 1rem auto;
+}
+
+.result {
+  font-size: 1.4rem;
+  transition: all 0.5s;
+}
+
+.popup-container {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  position: relative;
+  width: 40%;
+}
+
+.message {
+  position: absolute;
+  top: -40px;
+  width: 100%;
+  transition: all 0.5s;
+  animation-name: popup;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  padding: 0.7rem;
+  border-radius: 10px;
+}
+
+.win {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  background: #fff;
+  background: rgba(0, 255, 255, 0.5);
+}
+
+.hide {
+  animation-name: delete-popup;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes popup {
+  from {
+    top: -40px;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@keyframes delete-popup {
+  from {
+    top: 0;
+  }
+  to {
+    top: -40px;
+  }
+}
