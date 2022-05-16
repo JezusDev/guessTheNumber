@@ -1,0 +1,79 @@
+.slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 316px;
+  height: 390px;
+  padding: 20px 10px 30px 10px;
+  border: 1px solid $light-gray;
+  text-align: center;
+  position: relative;
+  background: #fff;
+  transition: all 0.3s;
+  &__img {
+    height: 140px;
+    position: relative;
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 16px;
+  }
+  &__shop-price,
+  &__master-price {
+    p {
+      color: $grey;
+      font-weight: 500;
+      font-size: 14px;
+      margin-bottom: 7px;
+    }
+    span {
+      font-family: Arial;
+      font-weight: 700;
+      font-size: 21px;
+    }
+  }
+
+  .slide__fast-watch {
+    position: absolute;
+    width: 100%;
+    background: $light-blue;
+    text-align: center;
+    padding: 14px;
+    top: calc(50% - 22px);
+    left: 0;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 3px;
+    opacity: 0;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    border: none;
+    box-shadow: 0px 1px 17px rgba(0, 0, 0, 0.1);
+    .slide__fast-watch {
+      opacity: 1;
+    }
+  }
+}
+
+.like-swiper {
+  width: 90%;
+  .swiper-wrapper {
+    height: 420px;
+    align-items: center;
+    .swiper-slide {
+      max-width: 316px;
+      height: 390px;
+    }
+  }
+}
+
+.like-slider {
+  margin-bottom: 100px;
+  h2 {
+    font-size: 26px;
+    font-weight: 600;
+  }
+}

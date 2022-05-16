@@ -1,0 +1,218 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 40px;
+
+  &__info {
+    background: $black;
+    color: #fff;
+    height: 50px;
+    width: 100%;
+
+    .container__info {
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-delivery,
+    &-call {
+      display: flex;
+      align-items: center;
+      gap: 70px;
+    }
+  }
+
+  &__main {
+    margin: 23px 0 30px 0;
+    display: flex;
+    width: 100%;
+    height: 46px;
+
+    a {
+      display: block;
+    }
+
+    .container__main {
+      // width: 100%;
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      @media (max-width: 1360px) {
+        gap: 15px;
+      }
+    }
+
+    &-logo {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      @media (max-width: 1360px) {
+        img {
+          width: 166px;
+          height: 100%;
+        }
+      }
+    }
+
+    &-catalog {
+      color: #fff;
+      background: $violet;
+      border-radius: 6px;
+      // position: relative;
+
+      button {
+        padding: 13px 25px;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 600;
+        img {
+          height: 12px;
+          width: 18px;
+          margin-right: 10px;
+        }
+
+        @media (max-width: 1360px) {
+          padding: 13px 19px;
+          // width: 130px;
+        }
+      }
+
+      .dropdown-menu {
+        // display: none;
+        color: $black;
+        position: absolute;
+        z-index: 3000;
+        left: 0;
+        right: 0;
+        display: flex;
+        min-width: 100%;
+        background: #fff;
+        padding: 80px 0;
+
+        .dropdown-container {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          margin: 0 auto;
+        }
+
+        &__item {
+          max-width: 25%;
+          flex: 1 1 calc(25%);
+          display: flex;
+          gap: 16px;
+          align-items: center;
+          margin-bottom: 93px;
+          font-size: 16px;
+          font-weight: 500;
+          padding-right: 5%;
+        }
+      }
+    }
+
+    &-search {
+      flex: 1 1;
+      border: 2px solid $light-gray;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #fff;
+      border-radius: 6px;
+      // margin-right: 40px;
+
+      input {
+        display: block;
+        padding: 13px 27px;
+        width: 100%;
+        height: 100%;
+      }
+
+      button {
+        background: $violet;
+        height: 100%;
+        margin: 3px 1px 3px 0;
+        padding: 10px 30px;
+        border-radius: 4px;
+        border: 1px solid $light-gray;
+        img {
+          height: 16px;
+        }
+      }
+    }
+
+    &-menu.menu {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      height: 100%;
+
+      .menu__link:last-child img {
+        height: 25px;
+      }
+
+      .menu__link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: end;
+        position: relative;
+        height: 100%;
+
+        .menu__img {
+          position: relative;
+          img {
+            width: 25px;
+          }
+
+          .menu__counter {
+            position: absolute;
+            width: 17px;
+            height: 17px;
+            top: -6px;
+            right: -12px;
+            background: $red;
+            text-align: center;
+            color: #fff;
+            border-radius: 100%;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 17px;
+          }
+        }
+      }
+
+      @media (max-width: 1360px) {
+        gap: 15px;
+
+        .menu__link:last-child img {
+          height: 20px;
+        }
+
+        .menu__link {
+          img {
+            width: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  &__links {
+    padding-bottom: 20px;
+    &-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: inline-flex;
+      gap: 25px;
+      font-weight: 500;
+      @media (max-width: 1360px) {
+        font-size: 14px;
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.breadcrumbs {
+  display: inline-flex;
+
+  .breadcrumb {
+    color: $grey;
+    font-size: 12px;
+    font-weight: 500;
+
+    &::after {
+      content: "/";
+      margin: 0px 6px;
+    }
+    &:last-of-type {
+      color: $black;
+    }
+    &:last-of-type::after {
+      content: "";
+    }
+  }
+}

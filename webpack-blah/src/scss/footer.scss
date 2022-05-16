@@ -1,0 +1,159 @@
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 60px 0;
+
+  h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    margin-top: 0;
+  }
+
+  li {
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+}
+
+.footer__company {
+  flex: 0 1 9%;
+}
+
+.footer__info {
+  flex: 0 1 16%;
+}
+
+.footer__help {
+  flex: 0 1 6%;
+}
+
+.footer__contacts {
+  flex: 0 1 19%;
+  &-numbers {
+    display: flex;
+    justify-content: space-between;
+    a {
+      font-weight: 700;
+      font-family: Arial;
+    }
+  }
+  &-mail {
+    color: $blue;
+    font-weight: 500;
+  }
+  &-address {
+    font-weight: 500;
+  }
+  &-map {
+    font-weight: 600;
+    color: $blue;
+    img {
+      position: relative;
+      bottom: -2px;
+      margin-left: 8px;
+    }
+  }
+}
+
+.footer__subscribe {
+  flex: 0 1 23%;
+  h4 {
+    font-size: 16px;
+    padding-right: 121px;
+  }
+  &-form {
+    input {
+      width: 100%;
+      padding: 13px 0 13px 20px;
+      border: 1px solid $light-gray;
+      border-radius: 7px;
+      margin-bottom: 10px;
+      &::-webkit-input-placeholder {
+        color: $light-gray;
+      }
+    }
+
+    button {
+      width: 100%;
+      text-align: center;
+      padding: 12px 0;
+      color: #fff;
+      background: $violet;
+      border-radius: 7px;
+    }
+  }
+}
+
+.footer__name {
+  margin-top: 50px;
+}
+
+.footer__social {
+  display: flex;
+  gap: 15px;
+  align-items: end;
+}
+
+@media (max-width: 1360px) {
+  .footer-wrapper {
+    padding: 40px 0;
+    // flex-direction: column;
+  }
+
+  .footer__subscribe {
+    order: -2;
+    flex: 0 1 58%;
+    margin-bottom: 30px;
+
+    h4 {
+      padding: 0;
+      width: 100%;
+    }
+
+    &-form {
+      display: flex;
+      justify-content: space-between;
+      input {
+        flex: 0 1 66%;
+        margin-bottom: 0;
+      }
+      button {
+        flex: 0 1 33%;
+      }
+    }
+  }
+
+  .footer__social {
+    order: -1;
+    flex: 0 1 38%;
+    margin-bottom: 30px;
+  }
+
+  .footer__company {
+    order: 0;
+    flex-basis: 33%;
+    margin-bottom: 20px;
+  }
+
+  .footer__help {
+    order: 1;
+    flex-basis: 67%;
+  }
+
+  .footer__info {
+    order: 2;
+    flex-basis: 33%;
+  }
+
+  .footer__contacts {
+    order: 3;
+    flex-basis: 67%;
+    padding-right: 40%;
+  }
+  .footer__name {
+    order: 4;
+    flex: 0 1 100%;
+  }
+}

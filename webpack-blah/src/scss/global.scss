@@ -1,0 +1,66 @@
+// Variables
+$violet: #6460ff;
+$red: #e92222;
+$grey: #979797;
+$blue: #1771f1;
+$black: #1b1c1d;
+$light-gray: #dadce4;
+$light-blue: #efefff;
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: $black;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background: none;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+input {
+  border: none;
+  outline: none;
+  color: #000;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 87.3%;
+  margin: 0 auto;
+  position: relative;
+  @media (max-width: 1360px) {
+    width: 93%;
+  }
+}
+
+.wrapper {
+  width: 87.3%;
+}
+
+.hide {
+  display: none;
+}
